@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Web3Modal from "web3modal";
+import Web3Modal, {} from "web3modal";
 import { providers, Contract } from "ethers";
 import { useEffect, useRef, useState } from "react";
 import { WHITELIST_CONTRACT_ADDRESS, abi } from "../constanst";
@@ -32,7 +32,7 @@ export default function Home() {
   const getProviderOrSigner = async (needSigner = false) => {
     // Connect to Metamask
     // Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
-    const provider = await web3ModalRef.current.connect();
+    const provider = await web3ModalRef?.current?.connect();
     const web3Provider = new providers.Web3Provider(provider);
 
     // If user is not connected to the Goerli network, let them know and throw an error
