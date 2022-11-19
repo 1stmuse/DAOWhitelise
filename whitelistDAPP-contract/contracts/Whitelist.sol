@@ -3,7 +3,7 @@ pragma solidity ^0.8.9;
 
 contract Whitelist {
 
-    //Max number of whitelisted addresses allowed
+    //Maxe number of whitelisted addresses allowed
     uint8 public maxWhitelistedAddresses;
 
     mapping(address => bool) public whitelistedAddresses;
